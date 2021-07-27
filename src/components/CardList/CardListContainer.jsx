@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import API from "../util/API.js";
+import API from "../../util/API.js";
 import CardListPresenter from './CardListPresenter.jsx';
 
 const CardListContainer = () => {
