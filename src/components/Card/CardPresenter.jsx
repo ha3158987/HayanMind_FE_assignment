@@ -1,9 +1,19 @@
-const CardPresenter = () => {
+import styled from "styled-components";
+
+const CardPresenter = ({ cardInfo }) => {
+  const { id, email, body } = cardInfo;
+
   return (
-    <div>
-      
-    </div>
+    <CardPresenterLayout>
+      <div>{id}</div>
+      <div>{email}</div>
+      <div>{body}</div>
+    </CardPresenterLayout>
   )
 }
 
-export default CardPresenter
+const CardPresenterLayout = styled.div`
+  border: 2px solid green;
+`
+
+export default CardPresenter;
