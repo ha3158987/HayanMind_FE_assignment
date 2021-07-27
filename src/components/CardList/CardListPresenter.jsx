@@ -14,7 +14,6 @@ const CardListPresenter = ({ cardListInfo }) => {
 }
 
 const CardListPresenterLayout = styled.div`
-  border: 2px solid blue;
 `
 
 const CardListPresenterLayer = styled.div`
