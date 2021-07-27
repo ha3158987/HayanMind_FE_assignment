@@ -1,9 +1,10 @@
-const CardContainer = () => {
+import CardPresenter from "./CardPresenter";
+
+const CardContainer = ({ cardInfo }) => {
+  console.log("cardInfo", cardInfo)
   return (
-    <div>
-      
-    </div>
+    <CardPresenter cardInfo={cardInfo} />
   )
 }
 
-export default CardContainer
+export default CardContainer;
