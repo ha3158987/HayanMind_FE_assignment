@@ -1,9 +1,8 @@
 import CardPresenter from "./CardPresenter";
 
-const CardContainer = ({ cardInfo }) => {
-  console.log("cardInfo", cardInfo)
+const CardContainer = ({ cardInfo, registerObservingEl }) => {
   return (
-    <CardPresenter cardInfo={cardInfo} />
+    <CardPresenter cardInfo={cardInfo} registerObservingEl={registerObservingEl} />
   )
 }
 
