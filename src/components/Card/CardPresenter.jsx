@@ -1,10 +1,17 @@
+import { useEffect, useRef } from 'react';
 import styled from "styled-components";
 
-const CardPresenter = ({ cardInfo }) => {
+const CardPresenter = ({ cardInfo, registerObservingEl }) => {
   const { id, email, body } = cardInfo;
+  const $target = useRef(null);
+
+  useEffect(() => {
+    if (registerObservingEl) registerObservingEl($target.current);
+  }, [])
+
 
   return (
-    <CardPresenterLayout>
+    <CardPresenterLayout ref={$target}>
       <CardPresenterLayer>
         <CardPresenterBlock><CardPresenterSpan>Comment Id</CardPresenterSpan> {id}</CardPresenterBlock>
         <CardPresenterBlock><CardPresenterSpan>Email</CardPresenterSpan> {email}</CardPresenterBlock>
