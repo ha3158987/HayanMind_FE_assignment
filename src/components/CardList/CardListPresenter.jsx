@@ -2,12 +2,16 @@ import styled from "styled-components";
 
 import CardContainer from "../Card/CardContainer";
 
-const CardListPresenter = ({ cardListInfo }) => {
+const CardListPresenter = ({ cardListInfo, registerObservingEl }) => {
 
   return (
     <CardListPresenterLayout>
       <CardListPresenterLayer>
-      {cardListInfo.map((cardInfo) => <CardContainer cardInfo={cardInfo} />)}
+      {cardListInfo.map((cardInfo, idx) => {
+        return idx === cardListInfo.length - 1
+        ? <CardContainer key={`CardContainer-${idx}`} cardInfo={cardInfo} registerObservingEl={registerObservingEl} />
+        : <CardContainer key={`CardContainer-${idx}`} cardInfo={cardInfo} />
+      })}
       </CardListPresenterLayer>
     </CardListPresenterLayout>
   )
