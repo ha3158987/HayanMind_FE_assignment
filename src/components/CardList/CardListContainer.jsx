@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styled from 'styled-components';
 
 // import API from "../util/API.js";
 import mock from '../util/mock.json';
@@ -24,5 +25,7 @@ const CardListContainer = () => {
     : <CardListPresenter cardListInfo={cardListInfo}/>
   )
 }
+
+
 
 export default CardListContainer;
