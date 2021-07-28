@@ -21,8 +21,6 @@ const CardPresenter = ({ cardInfo, registerObservingEl }) => {
   )
 }
 
-
-
 const CardPresenterLayout = styled.div`
   width: 500px;
   height: 193px;
